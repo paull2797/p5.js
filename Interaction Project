@@ -1,0 +1,49 @@
+function setup() {
+  createCanvas(600,600);
+var width = width
+var height = height
+color = 150
+numberone = 1
+numbertwo = 1
+background(0)
+}
+
+function keyPressed(){
+background(random(250),random(250),random(250))
+numbertwo = 1
+//reset
+}
+
+function mouseMoved() {
+strokeWeight(25)
+stroke(random(10,250),random(10,250),random(10,250))
+line(width/2,height,mouseX,mouseY) //bottom 
+line(width/2,height-height,mouseX,mouseY) //top 
+line(width,height/2,mouseX,mouseY) //right
+line(width-width,height/2,mouseX,mouseY) //left
+numbertwo = 1
+//middle lines
+}
+
+function mouseDragged() {
+stroke(color+random(-255,255),color+random(-255,255),color+random(-255,255))
+strokeWeight(25)
+fill(0)
+rect(mouseX-100,mouseY-100,200,200)
+fill(0)
+strokeWeight(10)
+stroke(color + random(10,200),color + random(10,200),color + random(10,200))
+ellipse(random(width),random(height),25,25)
+strokeWeight(50)
+stroke(color + random(10,250),color + random(10,250),color + random(10,250))
+line(0+numbertwo,0+numbertwo,0-numbertwo,0-numbertwo) //top left
+line(width-numbertwo,0+numbertwo,width+numbertwo,0-numbertwo) //top right
+line(width/2,0,width/2,0+numbertwo)//top down
+line(0,height/2,0+numbertwo,height/2) //left right
+line(width/2,height,width/2,height-numbertwo) //down up
+line(width,height/2,width-numbertwo,height/2)//right left
+line(width,height,width-numbertwo,height-numbertwo)//bottom right
+line(0,height,0+numbertwo,height-numbertwo) //bottom left
+numbertwo = numbertwo + 1
+//corner lines
+}
